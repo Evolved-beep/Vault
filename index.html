@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vault | Expense tracker </title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vault</h1>
+        <h2>Handle your money with Vault</h2>
+        <div class="balanced-card">
+            <div class="balanced-info" >
+                <h3 class="balanced-title">Total balance</h3>
+                <p class="balanced-amount" id="totalBalanced">0€</span>
+            </div>
+        </div>
+        <h2>Financial overview</h2>
+        <div class="overview-cards">
+            <div class="cards income-card">
+                <p class="title-amount">Income</p>
+                <p class="amount" id="totalIncomeAmount">0£</p>
+            </div>
+            <div class="cards expense-card">
+                <p class="title-amount">Expense</p>
+                <p class="amount" id="totalExpenseAmount">0£</p>
+            </div>
+        </div>
+        <h2>Add a new transaction</h2>
+        <div class="form-container">
+            <form id="form">
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" name="description" id="description" placeholder="Pizza,Restaurant">
+                </div>
+                <div class="form-group">
+                    <label>Amount</label>
+                    <input type="number" name="amount" step="any" min="0" id="amount" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="category" name="category"> 
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option >Bills</option>
+                        <option>Salary</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Type</p>
+                    <div class="radio-group">
+                        <div class="radio-container">
+                            <input type="radio" id="income" name="type" value="income">
+                            <label for="income">Income</label>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="expense" name="type" value="expense" checked>
+                            <label for="Expense">Expense</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Add the transaction</button>
+            </form>
+        </div>
+        <div class="transactions-section">
+            <h2>Transaction History</h2>
+            <div class="transaction-container" id="transactionsList">
+
+            </div>
+        </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
